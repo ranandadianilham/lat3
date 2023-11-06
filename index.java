@@ -33,7 +33,6 @@ public class index {
                 for (int i = 1; i < fields.length; i++) {
                     int value = Integer.parseInt(fields[i]);
                     if (value < 6) {
-                        System.out.println("eee " + value);
                         frequencyMap.put(5, frequencyMap.getOrDefault(value, 0) + 1);
                     } else {
                         frequencyMap.put(value, frequencyMap.getOrDefault(value, 0) + 1);
@@ -161,7 +160,7 @@ public class index {
                 if (frequencyMap.getOrDefault(i, 0) == 0)
                     continue;
 
-                System.out.println("i : " + i + " | val: " + frequencyMap.getOrDefault(i, 0));
+                //System.out.println("i : " + i + " | val: " + frequencyMap.getOrDefault(i, 0));
 
                 writer.write(i + "  | " + frequencyMap.getOrDefault(i, 0));
 
@@ -206,3 +205,6 @@ public class index {
         return answer;
     }
 }
+
+// javac -cp ".;libs/poi-<version>.jar;libs/poi-ooxml-<version>.jar"
+// ConvertTxtToDocx.java
